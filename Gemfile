@@ -5,6 +5,7 @@ gem 'rails', '3.0.1'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml-rails'
 gem 'compass'
+gem 'compass-960-plugin', :require => 'ninesixty'
 
 group :development, :test do
   gem 'capybara'
