@@ -1,0 +1,75 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/layout";
+@import "960/grid";
+
+$header_bg_color: #36393D;
+$footer_bg_color: #000;
+
+$header_fg_color: #FFF;
+$content_fg_color: #000;
+$footer_fg_color: #FFF;
+
+@include sticky-footer(30px, '#wrap', '#content', '#footer');
+
+html {
+  height: 100%;
+}
+
+#header {
+  @include clearfix;
+
+  padding: 10px 0 10px;
+  width: 100%;
+
+  background: $header_bg_color;
+  color: $header_fg_color;
+
+
+  #header-content {
+    @include grid-container;
+
+    #logo {
+      @include grid(12);
+    }
+  }
+}
+
+#content {
+  @include grid-container;
+
+  padding: 10px 0;
+
+  #main-content {
+    @include alpha;
+    @include grid(8);
+
+    color: $content_fg_color;
+  }
+
+  #sidebar {
+    @include omega;
+    @include grid(4);
+
+    color: $content_fg_color;
+  }
+}
+
+#footer {
+  @include clearfix;
+
+  width: 100%;
+
+  background: $footer_bg_color;
+  color: $footer_fg_color;
+
+  #footer-content {
+    @include grid-container;
+
+    #copyright {
+      @include grid(12);
+
+      padding: 5px 0;
+    }
+  }
+}
