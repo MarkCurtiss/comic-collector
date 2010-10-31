@@ -10,6 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20101031205607) do
+
+  create_table "issues", :force => true do |t|
+    t.string   "description"
+    t.integer  "issue_num"
+    t.integer  "volume_num"
+    t.integer  "series_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "barcode"
+  end
 
 end

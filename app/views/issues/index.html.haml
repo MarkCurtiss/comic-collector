@@ -1,0 +1,7 @@
+= form_tag(issues_path, :method => "get") do 
+  = label_tag(:by_barcode, "Barcode")
+  = text_field_tag(:by_barcode)
+  = submit_tag("Search")
+
+- @issues.each do |i|
+  = i.description

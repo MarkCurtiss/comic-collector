@@ -6,6 +6,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml-rails'
 gem 'compass'
 gem 'compass-960-plugin', :require => 'ninesixty'
+gem 'has_scope'
+gem 'escape_utils'
 
 group :development, :test do
   gem 'capybara'
@@ -18,5 +20,7 @@ group :development, :test do
   gem 'autotest-rails'
   gem 'autotest-growl'
   gem 'autotest-fsevent'
+  gem 'factory_girl'
   gem 'factory_girl_rails'
+  gem 'pickle'
 end
