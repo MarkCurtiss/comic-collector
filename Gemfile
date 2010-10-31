@@ -15,4 +15,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'spork'
   gem 'launchy'
+  gem 'autotest-rails'
+  gem 'autotest-growl'
+  gem 'autotest-fsevent'
+  gem 'factory_girl_rails'
 end
