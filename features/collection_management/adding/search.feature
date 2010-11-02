@@ -11,3 +11,15 @@ Feature: search for an issue
     And I press "Search"
     Then I should see "reprint edition"
     And I should not see "prestige edition"
+
+  Scenario: Searching by series and issue number
+    Given I am on the issues page
+    And the following issues exist
+      | series_name   | issue_num |
+      | X-Men         | 3         |
+      | X-Men         | 4         |
+      | X-Factor      | 34        |
+    When I fill in "Series" with "X-Men"
+    And I fill in "Issue Number" with "4"
+    And I press "Search"
+    Then I should see "X-Men test description 12345 4"
