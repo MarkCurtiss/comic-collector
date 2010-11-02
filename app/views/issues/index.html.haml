@@ -1,11 +1,11 @@
-= form_tag(issues_path, :method => "get") do 
-  = label_tag(:by_barcode, "Barcode")
+= form_tag(issues_path, :method => :get) do 
+  = label_tag(:by_barcode, 'Barcode')
   = text_field_tag(:by_barcode)
   = label_tag(:by_series_name, 'Series')
   = text_field_tag(:by_series_name)
   = label_tag(:by_issue_num, 'Issue Number')
   = text_field_tag(:by_issue_num)
-  = submit_tag("Search")
+  = submit_tag('Search')
 
 - @issues.each do |issue|
   %div= "#{issue.series_name} ##{issue.issue_num}"
