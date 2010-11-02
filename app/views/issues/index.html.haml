@@ -7,8 +7,5 @@
   = text_field_tag(:by_issue_num)
   = submit_tag("Search")
 
-- @issues.each do |i|
-  = i.series_name
-  = i.description
-  = i.barcode
-  = i.issue_num
+- @issues.each do |issue|
+  %div= "#{issue.series_name} ##{issue.issue_num}"
