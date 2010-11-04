@@ -16,8 +16,13 @@
       #content
         #main-content
           = yield
+          %p.notice 
+            = notice
+          %p.alert
+            = alert
         #sidebar
           Sidebar Here
+
     #footer
       #footer-content
         #copyright &copy; 2010 Startup Dot Com Associates
