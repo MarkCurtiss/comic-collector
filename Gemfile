@@ -8,6 +8,7 @@ gem 'compass'
 gem 'compass-960-plugin', :require => 'ninesixty'
 gem 'has_scope'
 gem 'escape_utils'
+gem 'devise'
 
 group :development, :test do
   gem 'capybara'
